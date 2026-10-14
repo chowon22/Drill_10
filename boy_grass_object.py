@@ -90,8 +90,8 @@ def reset_world():
     team = [Boy() for _ in range(11)]
     world += team
 
-    zombie = Zombie()
-    world.append(zombie)
+    # zombie = Zombie()
+    # world.append(zombie)
 
     balloons = [Ballon() for _ in range(20)]
     world += balloons
