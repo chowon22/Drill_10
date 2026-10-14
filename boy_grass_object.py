@@ -1,11 +1,14 @@
 from pico2d import *
 import random
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Game object class here
 class Grass:
     def __init__(self):
-        self.image = load_image('grass.png')
+        self.image = load_image("grass.png")
     def draw(self):
         self.image.draw(400, 30)
     def update(self):
