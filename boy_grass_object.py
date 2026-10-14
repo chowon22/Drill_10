@@ -1,3 +1,5 @@
+from turtle import speed
+
 from pico2d import *
 import random
 import os
@@ -48,6 +50,7 @@ class Ballon:
         self.speed = random.randint(5, 13)
         self.image = load_image('ball41x41.png')
     def update(self):
+        self.y += self.speed
     def draw(self):
         pass
 
