@@ -50,6 +50,7 @@ class Ballon:
         self.y = 120
         self.speed = random.randint(5, 13)
         self.image = load_image('ball41x41.png')
+        self.scale = random.randint(30, 60)
 
         self.isUp = True
     def update(self):
