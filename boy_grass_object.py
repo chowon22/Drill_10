@@ -6,13 +6,14 @@ import os
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
+WIDTH, HEIGHT = 800, 600
 
 # Game object class here
 class Grass:
     def __init__(self):
         self.image = load_image("grass.png")
     def draw(self):
-        self.image.draw(400, 30)
+        self.image.draw(WIDTH / 2, 30)
     def update(self):
         pass
 
@@ -50,7 +51,7 @@ class Ballon:
         self.speed = random.randint(5, 13)
         self.image = load_image('ball41x41.png')
     def update(self):
-        if self.y >= 600 - 20.5:
+        if self.y >= HEIGHT - 20.5:
             pass
         else:
             self.y += self.speed
@@ -96,7 +97,7 @@ def render_world():
         o.draw()
     update_canvas()
 
-open_canvas()
+open_canvas(WIDTH, HEIGHT)
 
 reset_world()
 
