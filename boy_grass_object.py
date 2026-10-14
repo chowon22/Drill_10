@@ -51,7 +51,7 @@ class Ballon:
         self.speed = random.randint(5, 13)
         self.image = load_image('ball41x41.png')
 
-        
+        self.isUp = True
     def update(self):
         if self.y >= HEIGHT - 20.5:
             pass
