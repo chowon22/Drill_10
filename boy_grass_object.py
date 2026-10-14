@@ -55,10 +55,11 @@ class Ballon:
     def update(self):
         if self.y >= HEIGHT - 20.5:
             self.start_moving()
-        if self.isUp:
+        if self.isUp or self.t >= 1:
             self.y += self.speed
         else:
-
+            self.t += 0.1
+            self.y = HEIGHT - 20.5 + (self.des - HEIGHT + 20.5) * self.t
     def draw(self):
         self.image.clip_draw(0, 0, 41, 41, self.x, self.y)
     def start_moving(self):
