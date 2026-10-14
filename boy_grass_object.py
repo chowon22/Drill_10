@@ -50,6 +50,8 @@ class Ballon:
         self.y = 120
         self.speed = random.randint(5, 13)
         self.image = load_image('ball41x41.png')
+
+        
     def update(self):
         if self.y >= HEIGHT - 20.5:
             pass
@@ -57,8 +59,9 @@ class Ballon:
             self.y += self.speed
     def draw(self):
         self.image.clip_draw(0, 0, 41, 41, self.x, self.y)
-    def start_moving():
-        pass
+    def start_moving(self):
+        self.t = 0
+        self.des = []
 
 def handle_events():
     global running
