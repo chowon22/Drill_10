@@ -40,7 +40,8 @@ class Zombie:
 
 class Ballon:
     def __init__(self):
-        pass
+        self.x = random.randint(100, 700)
+        self.y = 120
     def update(self):
         pass
     def draw(self):
