@@ -54,17 +54,17 @@ class Ballon:
 
         self.isUp = True
     def update(self):
-        if self.y >= HEIGHT - 20.5:
+        if self.y >= HEIGHT - self.scale / 2:
             self.start_moving()
         if self.isUp or self.t >= 1:
             self.y += self.speed
         else:
             self.t += 0.1
-            self.y = HEIGHT - 20.5 + (self.des - HEIGHT + 20.5) * self.t
+            self.y = HEIGHT - self.scale / 2 + (self.des - HEIGHT + self.scale / 2) * self.t
     def draw(self):
-        self.image.clip_draw(0, 0, 41, 41, self.x, self.y)
+        self.image.clip_draw(0, 0, 41, 41, self.x, self.y, self.scale, self.scale)
     def start_moving(self):
-        self.y = HEIGHT - 20.5
+        self.y = HEIGHT - self.scale / 2
         self.isUp = False
         self.t = 0
         self.des = random.randint(HEIGHT - 80, HEIGHT - 40)
