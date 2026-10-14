@@ -57,6 +57,8 @@ class Ballon:
             self.y += self.speed
     def draw(self):
         self.image.clip_draw(0, 0, 41, 41, self.x, self.y)
+    def start_moving():
+        pass
 
 def handle_events():
     global running
