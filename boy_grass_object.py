@@ -65,7 +65,7 @@ class Ballon:
         self.y = HEIGHT - 20.5
         self.isUp = False
         self.t = 0
-        self.des = []
+        self.des = random.randint(HEIGHT - 80, HEIGHT - 40)
 
 def handle_events():
     global running
